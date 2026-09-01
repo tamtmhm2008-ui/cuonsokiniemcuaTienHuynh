@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Love Story ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     NHẠC
+========================= -->
+
+<audio
+    id="music"
+    preload="metadata">
+</audio>
+
+
+<div
+    class="music-player"
+    aria-label="Trình phát nhạc">
+
+    <button
+        id="musicPrev"
+        class="music-control"
+        type="button">
+        ⏮
+    </button>
+
+    <button
+        id="musicBtn"
+        class="music-control music-main"
+        type="button">
+        🎵
+    </button>
+
+    <button
+        id="musicNext"
+        class="music-control"
+        type="button">
+        ⏭
+    </button>
+
+    <div
+        id="musicName"
+        class="music-name">
+        Chưa có nhạc
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TRANG CHỦ
+========================= -->
+
+<main
+    id="homePage"
+    class="page home-page">
+
+    <section class="hero">
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <p class="eyebrow">
+            A LITTLE STORY
+        </p>
+
+        <h1>
+            Một bí mật của anh với em
+        </h1>
+
+        <p class="intro">
+            Một nơi nhỏ để lưu lại những hình ảnh
+            kỷ niệm và những điều anh muốn nói. 💕
+        </p>
+
+        <button
+            class="start-btn"
+            onclick="startStory()">
+
+            Ấn vào đây ❤️
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<section
+    id="menuPage"
+    class="page sub-page hidden">
+
+    <div class="page-inner">
+
+        <button
+            class="back-btn"
+            onclick="goHome()">
+
+            ← Trang chủ
+
+        </button>
+
+        <p class="eyebrow">
+            A LITTLE STORY
+        </p>
+
+        <h1>
+            💖 Chọn một điều nhé
+        </h1>
+
+        <p class="section-desc">
+            Có một vài điều nhỏ anh muốn dành cho em ❤️
+        </p>
+
+        <div class="menu-grid">
+
+            <button
+                class="menu-card"
+                onclick="openPage('galleryPage')">
+
+                <span>
+                    📸
+                </span>
+
+                <strong>
+                    Hình ảnh
+                </strong>
+
+                <small>
+                    Những khoảnh khắc đáng nhớ
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-card"
+                onclick="openPage('memoryPage')">
+
+                <span>
+                    💕
+                </span>
+
+                <strong>
+                    Kỷ niệm
+                </strong>
+
+                <small>
+                    Những kỷ niệm đáng nhớ
+                </small>
+
+            </button>
+
+
+            <button
+                class="menu-card"
+                onclick="openPage('wishPage')">
+
+                <span>
+                    💌
+                </span>
+
+                <strong>
+                    Câu chúc
+                </strong>
+
+                <small>
+                    Những câu chúc dành cho em
+                </small>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HÌNH ẢNH
+========================= -->
+
+<section
+    id="galleryPage"
+    class="page sub-page hidden">
+
+    <div class="page-inner">
+
+        <button
+            class="back-btn"
+            onclick="openPage('menuPage')">
+
+            ← Quay lại
+
+        </button>
+
+        <p class="eyebrow">
+            OUR MOMENTS
+        </p>
+
+        <h1>
+            📸 Hình ảnh
+        </h1>
+
+        <p class="section-desc">
+            Kéo qua để xem ảnh nha bé ❤️
+        </p>
+
+
+        <div class="album-scroller">
+
+
+            <article class="photo-card">
+
+                <img
+                    src="anh1.jpg"
+                    alt="Khoảnh khắc 1">
+
+                <div class="photo-note">
+
+                    <b>
+                        Khoảnh khắc số 1
+                    </b>
+
+                    <br>
+
+                    hẹ hẹ lần đầu dám chụp chung nè 😍😍
+
+                </div>
+
+            </article>
+
+
+            <article class="photo-card">
+
+                <img
+                    src="anh2.jpg"
+                    alt="Khoảnh khắc 2">
+
+                <div class="photo-note">
+
+                    <b>
+                        Khoảnh khắc 02
+                    </b>
+
+                    <br>
+
+                    Lúc này đi chơi gòi chụp nè,
+                    còn ngại đeo khẩu trang he 🥰🥰
+
+                </div>
+
+            </article>
+
+
+            <article class="photo-card">
+
+                <img
+                    src="anh3.jpg"
+                    alt="Khoảnh khắc 3">
+
+                <div class="photo-note">
+
+                    <b>
+                        Khoảnh khắc 03
+                    </b>
+
+                    <br>
+
+                    Ở lại trường ra về òi lén chụp nè,
+                    lần đầu chụp chung lộ mặt nhe 😘
+
+                </div>
+
+            </article>
+
+
+            <article class="photo-card">
+
+                <img
+                    src="anh4.jpg"
+                    alt="Khoảnh khắc 4">
+
+                <div class="photo-note">
+
+                    <b>
+                        Khoảnh khắc 04
+                    </b>
+
+                    <br>
+
+                    Lần đầu làm chuyện ấy 😉😉
+
+                </div>
+
+            </article>
+
+
+            <article class="photo-card">
+
+                <img
+                    src="anh5.jpg"
+                    alt="Khoảnh khắc 5">
+
+                <div class="photo-note">
+
+                    <b>
+                        Khoảnh khắc 05
+                    </b>
+
+                    <br>
+
+                    Bữa này mình ii 2 năm nhoaaa,
+                    mong thứ 3 phải đẹp hơn nữa 😝😝
+
+                </div>
+
+            </article>
+
+
+            <article class="photo-card">
+
+                <img
+                    src="anh6.jpg"
+                    alt="Khoảnh khắc 6">
+
+                <div class="photo-note">
+
+                    <b>
+                        Khoảnh khắc 06
+                    </b>
+
+                    <br>
+
+                    Rồi 2 đứa cùng tốt nghiệp nè,
+                    tình yêu mình bước sang trang mới ❤️❤️
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <p class="scroll-hint">
+            ↔ Lướt qua để hoài niệm ❤️❤️❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KỶ NIỆM
+     KHÔNG CÓ ẢNH
+========================= -->
+
+<section
+    id="memoryPage"
+    class="page sub-page hidden">
+
+    <div class="page-inner">
+
+        <button
+            class="back-btn"
+            onclick="openPage('menuPage')">
+
+            ← Quay lại
+
+        </button>
+
+        <p class="eyebrow">
+            OUR MEMORIES
+        </p>
+
+        <h1>
+            💕 Kỷ niệm
+        </h1>
+
+        <p class="section-desc">
+            Mỗi trang là một câu chuyện nhỏ ❤️
+        </p>
+
+
+        <div class="memory-book">
+
+            <div class="memory-top">
+
+                <span id="memoryCounter">
+                    Trang 1 / 10
+                </span>
+
+                <div>
+
+                    <button
+                        class="nav-btn"
+                        onclick="changeMemory(-1)">
+                        ←
+                    </button>
+
+                    <button
+                        class="nav-btn"
+                        onclick="changeMemory(1)">
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <article class="memory-card">
+
+                <div
+                    id="memoryDate"
+                    class="memory-date">
+                </div>
+
+                <h2
+                    id="memoryTitle">
+                </h2>
+
+                <p
+                    id="memoryText">
+                </p>
+
+            </article>
+
+
+            <div
+                id="memoryDots"
+                class="dots">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CÂU CHÚC
+========================= -->
+
+<section
+    id="wishPage"
+    class="page sub-page hidden">
+
+    <div class="page-inner">
+
+        <button
+            class="back-btn"
+            onclick="openPage('menuPage')">
+
+            ← Quay lại
+
+        </button>
+
+        <p class="eyebrow">
+            LITTLE WISHES
+        </p>
+
+        <h1>
+            💌 Câu chúc
+        </h1>
+
+        <p class="section-desc">
+            10 điều nhỏ muốn gửi đến em ❤️
+        </p>
+
+
+        <article class="wish-card">
+
+            <div
+                id="wishDate"
+                class="wish-date">
+            </div>
+
+            <h2
+                id="wishTitle">
+            </h2>
+
+            <p
+                id="wishText">
+            </p>
+
+
+            <div class="wish-navigation">
+
+                <button
+                    class="nav-btn"
+                    onclick="changeWish(-1)">
+                    ←
+                </button>
+
+                <button
+                    class="nav-btn"
+                    onclick="changeWish(1)">
+                    →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <div
+            id="wishDots"
+            class="dots">
+        </div>
+
+
+        <div class="big-hearts">
+            ❤️ 💕 💖 💗 ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MÈO BÍ MẬT
+========================= -->
+
+<button
+    id="secretCat"
+    class="secret-cat"
+    type="button">
+
+    🐱
+
+</button>
+
+
+<div
+    id="secretMessage"
+    class="secret-message">
+
+ Ú òa , bị phát hiện òi hun cái nè 😘😘
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

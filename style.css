@@ -1,0 +1,863 @@
+/* ==================================================
+   CÀI ĐẶT CHUNG
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+}
+
+body{
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fff5fa
+        );
+
+    color:#5a3040;
+}
+
+button{
+    font:inherit;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.page{
+    min-height:100vh;
+}
+
+.sub-page{
+    padding:35px 20px 80px;
+    animation:pageAppear .5s ease;
+}
+
+@keyframes pageAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.page-inner{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+
+/* ==================================================
+   TRANG CHỦ
+================================================== */
+
+.home-page{
+    min-height:100vh;
+}
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.heart{
+    font-size:88px;
+    animation:heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat{
+
+    50%{
+        transform:scale(1.15);
+    }
+
+}
+
+.eyebrow{
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:bold;
+
+    color:#d6336c;
+
+    margin:15px 0;
+}
+
+h1{
+    font-size:clamp(
+        32px,
+        6vw,
+        54px
+    );
+
+    color:#e75480;
+
+    margin-bottom:18px;
+}
+
+h2{
+    color:#d6336c;
+}
+
+.intro{
+    max-width:650px;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.start-btn{
+    margin-top:30px;
+
+    padding:15px 30px;
+
+    border:none;
+    border-radius:30px;
+
+    background:#ff6b9d;
+    color:white;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 25px #e7548040;
+
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:
+        translateY(-3px)
+        scale(1.03);
+}
+
+
+/* ==================================================
+   TRÌNH PHÁT NHẠC
+================================================== */
+
+.music-player{
+    position:fixed;
+
+    right:20px;
+    top:20px;
+
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    padding:6px 12px 6px 6px;
+
+    border-radius:30px;
+
+    background:rgba(
+        255,
+        255,
+        255,
+        .94
+    );
+
+    box-shadow:
+        0 8px 25px #00000018;
+
+    backdrop-filter:blur(8px);
+}
+
+.music-control{
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#ff6b9d;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:17px;
+    line-height:1;
+
+    transition:.25s;
+}
+
+.music-control:hover{
+    transform:scale(1.08);
+}
+
+.music-main{
+    width:46px;
+    height:46px;
+
+    font-size:20px;
+}
+
+.music-name{
+    max-width:170px;
+
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+
+    color:#d6336c;
+
+    font-size:13px;
+    font-weight:bold;
+}
+
+
+/* ==================================================
+   NÚT QUAY LẠI
+================================================== */
+
+.back-btn{
+    padding:11px 20px;
+
+    border:none;
+    border-radius:30px;
+
+    background:white;
+    color:#d6336c;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 5px 18px #00000012;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* ==================================================
+   MÔ TẢ
+================================================== */
+
+.section-desc{
+    font-size:18px;
+    line-height:1.7;
+
+    margin-bottom:10px;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+.menu-grid{
+    max-width:1100px;
+
+    margin:45px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.menu-card{
+    min-height:230px;
+
+    padding:30px;
+
+    border:none;
+    border-radius:30px;
+
+    background:white;
+    color:#5a3040;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 30px #00000018;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    transition:.4s;
+}
+
+.menu-card:hover{
+    transform:
+        translateY(-10px)
+        scale(1.03);
+}
+
+.menu-card span{
+    font-size:65px;
+}
+
+.menu-card strong{
+    font-size:23px;
+    color:#d6336c;
+}
+
+.menu-card small{
+    font-size:15px;
+    line-height:1.5;
+}
+
+
+/* ==================================================
+   HÌNH ẢNH
+================================================== */
+
+.album-scroller{
+    display:flex;
+
+    gap:25px;
+
+    overflow-x:auto;
+
+    padding:
+        35px
+        8px
+        25px;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:thin;
+}
+
+.photo-card{
+    flex:
+        0 0 280px;
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 10px 28px #00000018;
+
+    scroll-snap-align:center;
+
+    text-align:left;
+}
+
+.photo-card img{
+    display:block;
+
+    width:100%;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    background:#ffeaf2;
+}
+
+.photo-note{
+    padding:
+        15px
+        7px
+        8px;
+
+    line-height:1.6;
+}
+
+.photo-note b{
+    color:#d6336c;
+}
+
+.scroll-hint{
+    font-size:14px;
+    opacity:.7;
+}
+
+
+/* ==================================================
+   KỶ NIỆM
+   KHÔNG CÓ CSS ẢNH
+================================================== */
+
+.memory-book{
+    width:100%;
+
+    max-width:780px;
+
+    margin:35px auto 0;
+}
+
+.memory-top{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:15px;
+
+    color:#a34b6a;
+}
+
+.nav-btn{
+    width:44px;
+    height:44px;
+
+    margin-left:5px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#ff6b9d;
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    transform:scale(1.08);
+}
+
+.memory-card{
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    min-height:450px;
+
+    text-align:left;
+
+    box-shadow:
+        0 12px 30px #00000018;
+
+    animation:
+        cardAppear .35s ease;
+}
+
+@keyframes cardAppear{
+
+    from{
+        opacity:.3;
+
+        transform:
+            translateX(15px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+.memory-date{
+    display:inline-block;
+
+    padding:8px 14px;
+
+    margin-bottom:15px;
+
+    border-radius:20px;
+
+    background:#ffe2ed;
+
+    color:#d6336c;
+
+    font-size:14px;
+}
+
+.memory-card h2{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.memory-card p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+
+/* ==================================================
+   DOT
+================================================== */
+
+.dots{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-top:20px;
+}
+
+.dot{
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:#f0a9c1;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.dot:hover{
+    transform:scale(1.4);
+}
+
+.dot.active{
+    background:#d6336c;
+
+    transform:scale(1.3);
+}
+
+
+/* ==================================================
+   CÂU CHÚC
+================================================== */
+
+.wish-card{
+    background:white;
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    max-width:780px;
+
+    margin:35px auto 0;
+
+    box-shadow:
+        0 12px 30px #00000018;
+
+    text-align:center;
+
+    animation:
+        cardAppear .35s ease;
+}
+
+.wish-date{
+    display:inline-block;
+
+    padding:8px 14px;
+
+    margin-bottom:15px;
+
+    border-radius:20px;
+
+    background:#ffe2ed;
+
+    color:#d6336c;
+
+    font-size:14px;
+}
+
+.wish-card h2{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.wish-card p{
+    font-size:18px;
+    line-height:1.9;
+}
+
+.wish-navigation{
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:25px;
+}
+
+.big-hearts{
+    text-align:center;
+
+    font-size:27px;
+
+    margin-top:35px;
+}
+
+
+/* ==================================================
+   MÈO BÍ MẬT
+================================================== */
+
+.secret-cat{
+    position:fixed;
+
+    left:12px;
+    bottom:-10px;
+
+    z-index:1100;
+
+    width:75px;
+    height:70px;
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    font-size:58px;
+
+    transition:.3s;
+}
+
+.secret-cat:hover{
+    transform:
+        translateY(-10px)
+        rotate(-5deg);
+}
+
+.secret-cat:active{
+    transform:
+        translateY(-5px)
+        scale(.95);
+}
+
+.secret-message{
+    position:fixed;
+
+    left:20px;
+    bottom:70px;
+
+    z-index:1099;
+
+    max-width:300px;
+
+    padding:14px 18px;
+
+    background:white;
+
+    color:#d6336c;
+
+    border-radius:
+        20px
+        20px
+        20px
+        5px;
+
+    box-shadow:
+        0 8px 25px #00000020;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        translateY(12px)
+        scale(.95);
+
+    transition:.3s;
+}
+
+.secret-message.show{
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ==================================================
+   TIM BAY
+================================================== */
+
+.click-heart{
+    position:fixed;
+
+    pointer-events:none;
+
+    z-index:1200;
+
+    font-size:28px;
+
+    animation:
+        flyHeart
+        1.7s
+        forwards;
+}
+
+@keyframes flyHeart{
+
+    from{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    to{
+        opacity:0;
+
+        transform:
+            translateY(-150px)
+            scale(1.3);
+    }
+
+}
+
+
+/* ==================================================
+   ĐIỆN THOẠI
+================================================== */
+
+@media(max-width:700px){
+
+    .hero{
+        min-height:100vh;
+
+        padding:
+            30px
+            20px;
+    }
+
+    .heart{
+        font-size:70px;
+    }
+
+    .intro{
+        font-size:16px;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+
+        margin-top:35px;
+    }
+
+    .menu-card{
+        min-height:175px;
+    }
+
+    .menu-card span{
+        font-size:52px;
+    }
+
+    .photo-card{
+        flex-basis:82vw;
+    }
+
+    .photo-card img{
+        height:320px;
+    }
+
+    .memory-card{
+        min-height:0;
+
+        padding:
+            25px
+            20px;
+    }
+
+    .memory-card h2{
+        font-size:24px;
+    }
+
+    .memory-card p{
+        font-size:16px;
+    }
+
+    .music-player{
+        right:10px;
+        top:10px;
+
+        padding:
+            5px
+            8px
+            5px
+            5px;
+    }
+
+    .music-control{
+        width:38px;
+        height:38px;
+
+        font-size:15px;
+    }
+
+    .music-main{
+        width:42px;
+        height:42px;
+
+        font-size:18px;
+    }
+
+    .music-name{
+        max-width:105px;
+
+        font-size:12px;
+    }
+
+    .secret-cat{
+        left:5px;
+    }
+
+    .secret-message{
+        left:15px;
+
+        max-width:
+            calc(100vw - 80px);
+    }
+
+}
